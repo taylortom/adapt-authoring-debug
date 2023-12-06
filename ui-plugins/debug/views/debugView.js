@@ -16,15 +16,20 @@ define(function(require){
     },
 
     postRender: function() {
+      this.showPlugin(this.model.get('plugins').at(0))
       this.setViewToReady();
+    },
+
+    showPlugin: function(p) {
+      this.$('.view-title').text(p.title)
+      this.$('.view').html(new p.view().$el)
+      this.$('.nav button').prop('disabled', false);
+      this.$(`.nav button[data-name=${p.name}]`).prop('disabled', true);
     },
 
     onNavClicked: function(e) {
       const name = $(e.currentTarget).attr('data-name');
-      const p = this.model.get('plugins').find(p => p.name = name);
-      
-      this.$('.view-title').text(p.title)
-      this.$('.view').html(new p.view().$el)
+      this.showPlugin(this.model.get('plugins').find(p => p.name = name))
     }
   }, {
     template: 'debug'
