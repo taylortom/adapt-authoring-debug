@@ -7,7 +7,7 @@ define(function(require){
     tagName: 'div',
     className: 'debug',
     events: {
-      'click .nav button': 'onNavClicked'
+      'click .nav-container .nav button': 'onNavClicked'
     },
 
     initialize: function(options) {
