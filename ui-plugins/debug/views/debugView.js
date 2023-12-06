@@ -29,7 +29,7 @@ define(function(require){
 
     onNavClicked: function(e) {
       const name = $(e.currentTarget).attr('data-name');
-      this.showPlugin(this.model.get('plugins').find(p => p.name = name))
+      this.showPlugin(this.model.get('plugins').find(p => p.name === name))
     }
   }, {
     template: 'debug'
