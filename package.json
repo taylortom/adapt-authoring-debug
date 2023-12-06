@@ -7,6 +7,7 @@
   "main": "index.js",
   "dependencies": {
     "adapt-authoring-core": "git+https://github.com/adapt-security/adapt-authoring-core.git",
-    "adapt-authoring-debug-logs": "git+https://github.com/taylortom/adapt-authoring-debug-logs.git"
+    "adapt-authoring-debug-logs": "git+https://github.com/taylortom/adapt-authoring-debug-logs.git",
+    "adapt-authoring-debug-schemas": "git+https://github.com/taylortom/adapt-authoring-debug-schemas.git"
   }
 }
