@@ -19,7 +19,11 @@ define(function(require) {
   });
 
   Origin.on(`${FEATURE_NAME}:addView`, function(pluginData) {
-    plugins.push(pluginData);
+    if(!plugins.find(p => p.name === pluginData.name)) {
+      plugins.push(pluginData);
+    } else {
+      console.log(`Plugin already registered with name ${pluginData.name}`);
+    }
   });
 
   Origin.on('origin:dataReady login:changed', function() {
