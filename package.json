@@ -1,0 +1,11 @@
+{
+  "name": "adapt-authoring-debug",
+  "version": "0.0.1",
+  "description": "Debug tools for the v1 UI",
+  "homepage": "https://github.com/taylortom/adapt-authoring-debug",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "adapt-authoring-core": "git+https://github.com/adapt-security/adapt-authoring-core.git"
+  }
+}
