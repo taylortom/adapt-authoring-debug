@@ -6,6 +6,7 @@
   "type": "module",
   "main": "index.js",
   "dependencies": {
+    "adapt-authoring-collab": "github:taylortom/adapt-authoring-collab",
     "adapt-authoring-core": "github:adapt-security/adapt-authoring-core",
     "adapt-authoring-debug-logs": "github:taylortom/adapt-authoring-debug-logs",
     "adapt-authoring-debug-schemas": "github:taylortom/adapt-authoring-debug-schemas"
