@@ -21,6 +21,7 @@ define(function(require) {
   Origin.on(`${FEATURE_NAME}:addView`, function(pluginData) {
     if(!plugins.find(p => p.name === pluginData.name)) {
       plugins.push(pluginData);
+      plugins.sort((a, b) => a.title.localeCompare(b.title))
     } else {
       console.log(`Plugin already registered with name ${pluginData.name}`);
     }
