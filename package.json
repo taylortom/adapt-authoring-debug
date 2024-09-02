@@ -10,7 +10,6 @@
     "adapt-authoring-core": "github:adapt-security/adapt-authoring-core",
     "adapt-authoring-debug-adaptframework": "github:taylortom/adapt-authoring-debug-adaptframework",
     "adapt-authoring-debug-logs": "github:taylortom/adapt-authoring-debug-logs",
-    "adapt-authoring-debug-purge": "github:taylortom/adapt-authoring-debug-purge",
     "adapt-authoring-debug-schemas": "github:taylortom/adapt-authoring-debug-schemas"
   }
 }
