@@ -14,7 +14,7 @@ define(function(require) {
   Origin.on(`router:${FEATURE_NAME}`, function(location, subLocation, action) {
     Origin.trigger('location:title:update', { title: Origin.l10n.t(`app.${FEATURE_NAME}`) });
     Origin.trigger('sidebar:sidebarContainer:hide');
-    Origin.contentPane.setView(DebugView, { plugins });
+    Origin.contentPane.setView(DebugView, { plugins }, { fullWidth: true });
 
   });
 
