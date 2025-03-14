@@ -15,7 +15,6 @@ define(function(require) {
     Origin.trigger('location:title:update', { title: Origin.l10n.t(`app.${FEATURE_NAME}`) });
     Origin.trigger('sidebar:sidebarContainer:hide');
     Origin.contentPane.setView(DebugView, { plugins }, { fullWidth: true });
-
   });
 
   Origin.on(`${FEATURE_NAME}:addView`, function(pluginData) {
