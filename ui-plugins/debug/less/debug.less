@@ -1,6 +1,8 @@
 @import 'fonts';
 @import 'sharedStyles';
 
+@border-radius: 5px;
+
 body.module-debug {
   #app .debug {
     .title {
@@ -40,6 +42,70 @@ body.module-debug {
       font-weight: @font-weight-bold;
       background-color: @primary-color;
       color: @white;
+    }
+
+    .view .about .info {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      .section {
+        padding: 10px;
+        color: @adapt-white;
+        background-color: @tertiary-color;
+        border-bottom: 1px solid lighten(@tertiary-color, 10%);
+        text-align: center;
+
+        &:first-child { 
+          border-top-left-radius: @border-radius;
+          border-top-right-radius: @border-radius;
+        }
+        &:last-child {
+          border-bottom-left-radius: @border-radius;
+          border-bottom-right-radius: @border-radius;
+          border-bottom: none;
+        }
+
+        &.heading {
+          font-size: 125%;
+          font-weight: bold;
+          background-color: @secondary-color;
+          .version {
+            .number { color: @adapt-white !important; }
+            .commit { color: @adapt-white !important; }
+          }
+        }
+
+        .logo {
+          width: 100px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .inner > div {
+          display: inline-block;
+          
+          &.icon {
+            width: 25px;
+          }
+          &.name {
+            width: 200px;
+            text-align: left;
+          }
+          &.version {
+            width: 200px;
+            .number {
+              color: @secondary-color;
+              padding-right: 5px;
+            }
+            .commit {
+              color: @primary-color;
+            }
+          }
+        }
+      }
     }
   }
 }

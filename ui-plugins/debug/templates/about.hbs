@@ -1,0 +1,38 @@
+<div class="inner">
+  <div class="info">
+    {{console this}}
+    <div class="section">
+      <div class="logo"><img src="/css/assets/adapt-learning-logo-white.png" alt="Adapt Learning logo"></div>
+    </div>
+    <div class="section heading">
+      <div class="inner">
+        <div class="icon"><i class="fa fa-server"/></div>
+        <div class="name">Adapt authoring</div>
+        <div class="version"><span class="number">{{this.adapt-authoring.version}}</span><span class="commit">{{this.adapt-authoring.commit}}</span></div>
+      </div>
+    </div>
+    {{#each this.modules}}
+      <div class="section">
+      <div class="inner">
+        <div class="name">{{this.[0]}}</div>
+        <div class="version"><span class="number">{{this.[1]}}</span></div>
+      </div>
+    </div>
+    {{/each}}
+    <div class="section heading">
+      <div class="inner">
+        <div class="icon"><i class="fa fa-briefcase"/></div>
+        <div class="name">Adapt framework</div>
+        <div class="version"><span class="number">{{this.adapt_framework.version}}</span></div>
+      </div>
+    </div>
+    {{#each this.contentplugins}}
+      <div class="section">
+      <div class="inner">
+        <div class="name">{{this.[0]}}</div>
+        <div class="version"><span class="number">{{this.[1]}}</span></div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

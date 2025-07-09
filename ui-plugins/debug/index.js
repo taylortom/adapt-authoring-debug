@@ -1,11 +1,17 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
 define(function(require) {
   var Origin = require('core/origin');
+  var AboutView = require('./views/aboutView');
   var DebugView = require('./views/debugView');
 
   var FEATURE_NAME = 'debug';
   var FEATURE_PERMISSIONS = ["debug"];
-  var plugins = [];
+  var plugins = [{
+    name: 'about', 
+    icon: 'info-circle', 
+    title: Origin.l10n.t('app.about'), 
+    view: AboutView
+  }];
 
   Origin.on(`globalMenu:${FEATURE_NAME}:open`, function() {
     Origin.router.navigateTo(FEATURE_NAME);
