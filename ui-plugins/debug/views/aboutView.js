@@ -11,6 +11,8 @@ define(function(require){
       const commit = modelData['adapt-authoring'].commit
       if(commit) modelData['adapt-authoring'].commit = commit.slice(0, 7)
 
+      ['contentplugins', 'modules'].forEach(s => modelData[s] = modelData[s].sort((a,b) => a[0].localeCompare(b[0)))
+
       this.model = { toJSON: () => modelData }
       OriginView.prototype.render.apply(this, arguments);
     }
